@@ -1,9 +1,12 @@
+// ignore_for_file: depend_on_referenced_packages, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HolidaysListWidget extends StatefulWidget {
+  const HolidaysListWidget({super.key});
+
   @override
   _HolidaysListWidgetState createState() => _HolidaysListWidgetState();
 }
@@ -61,20 +64,29 @@ class _HolidaysListWidgetState extends State<HolidaysListWidget> {
                       }
                     });
                   },
-                  child: Row(
-                    children: [
-                      Text(
-                        DateFormat('MMMM yyyy').format(_selectedMonth),
-                        style: const TextStyle(fontSize: 18),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEFEFEF),
+                      borderRadius: BorderRadius.circular(6)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            DateFormat('MMMM yyyy').format(_selectedMonth),
+                            style: const TextStyle(fontSize: 12),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5.0),
+                            child: SvgPicture.asset(
+                              "assets/icons/Path (Stroke).svg",
+                              height: 7,
+                            ),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5.0),
-                        child: SvgPicture.asset(
-                          "assets/icons/Path (Stroke).svg",
-                          height: 7,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ],

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, camel_case_types
+
 import 'package:employee_management/screen_divisions/home_screen/attendance_clock.dart';
 import 'package:employee_management/screen_divisions/home_screen/celebration.dart';
 import 'package:flutter/material.dart';
@@ -63,9 +65,9 @@ class _dashboardState extends State<dashboard> {
                   const SizedBox(height: 20,),
                   const attendance(),
                   const SizedBox(height: 30,),
-                  HolidaysListWidget(),
+                  const HolidaysListWidget(),
                   const SizedBox(height: 30,),
-                  CelebrationListWidget(),
+                  const CelebrationListWidget(),
                   const SizedBox(
                     height: 30,
                   ),

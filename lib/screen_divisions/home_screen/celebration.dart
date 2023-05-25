@@ -1,7 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api, depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CelebrationListWidget extends StatefulWidget {
+  const CelebrationListWidget({super.key});
+
   @override
   _CelebrationListWidgetState createState() => _CelebrationListWidgetState();
 }
@@ -59,14 +64,29 @@ class _CelebrationListWidgetState extends State<CelebrationListWidget> {
                       }
                     });
                   },
-                  child: Row(
-                    children: [
-                      Text(
-                        DateFormat('MMMM yyyy').format(_selectedMonth),
-                        style: const TextStyle(fontSize: 18),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: const Color(0xFFEFEFEF),
+                        borderRadius: BorderRadius.circular(6)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            DateFormat('MMMM yyyy').format(_selectedMonth),
+                            style: const TextStyle(fontSize: 12),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5.0),
+                            child: SvgPicture.asset(
+                              "assets/icons/Path (Stroke).svg",
+                              height: 7,
+                            ),
+                          ),
+                        ],
                       ),
-                      const Icon(Icons.arrow_drop_down),
-                    ],
+                    ),
                   ),
                 ),
               ],
