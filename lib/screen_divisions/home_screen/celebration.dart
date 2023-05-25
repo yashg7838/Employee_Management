@@ -109,8 +109,8 @@ class _CelebrationListWidgetState extends State<CelebrationListWidget> {
                     child: Row(
                       children: [
                         Container(
-                          width: 65,
-                          height: 65,
+                          width: 50,
+                          height: 50,
                           decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(7),
@@ -121,7 +121,7 @@ class _CelebrationListWidgetState extends State<CelebrationListWidget> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 45
+                                  fontSize: 34
                               ),
                             ),
                           ),
@@ -134,8 +134,8 @@ class _CelebrationListWidgetState extends State<CelebrationListWidget> {
                               Text(
                                 'Someone\'s Birthday',
                                 style: TextStyle(
-                                  fontSize: 21,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
