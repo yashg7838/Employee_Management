@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages, library_private_types_in_public_api
+// ignore_for_file: depend_on_referenced_packages, library_private_types_in_public_api, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -13,13 +13,13 @@ class attendanceListWidget extends StatefulWidget {
 
 class _attendanceListWidgetState extends State<attendanceListWidget> {
   DateTime _selectedMonth = DateTime.now();
-  String _present = '17';
-  String _holidays = '03';
-  String _leaves = '02';
-  String _penalty = '00';
-  String _casualleaves = '02';
-  String _sickleaves = '02';
-  String _maternityleaves = '00';
+  final String _present = '17';
+  final String _holidays = '03';
+  final String _leaves = '02';
+  final String _penalty = '00';
+  final String _casualleaves = '02';
+  final String _sickleaves = '02';
+  final String _maternityleaves = '00';
 
 
   @override
@@ -109,28 +109,20 @@ class _attendanceListWidgetState extends State<attendanceListWidget> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          child: Text('$_present',style: TextStyle(fontSize: 12,
-                              fontWeight: FontWeight.w600 ),),
-                        ),
-                        SizedBox(width: 5,),
-                        Container(
-                          child: Text("Present"),
-                        )
+                        Text(_present,style: const TextStyle(fontSize: 12,
+                            fontWeight: FontWeight.w600 ),),
+                        const SizedBox(width: 5,),
+                        const Text("Present")
                       ],
                     ),
-                    Container(
-                      width: 115,
+                    SizedBox(
+                      width: 135,
                       child: Row(
                         children: [
-                          Container(
-                            child: Text('$_leaves',style: TextStyle(fontSize: 12,
-                                fontWeight: FontWeight.w600 ),),
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            child: Text("Leaves"),
-                          )
+                          Text(_leaves,style: const TextStyle(fontSize: 12,
+                              fontWeight: FontWeight.w600 ),),
+                          const SizedBox(width: 5,),
+                          const Text("Leaves")
                         ],
                       ),
                     )
@@ -144,28 +136,20 @@ class _attendanceListWidgetState extends State<attendanceListWidget> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          child: Text('$_holidays',style: TextStyle(fontSize: 12,
-                              fontWeight: FontWeight.w600 ),),
-                        ),
-                        SizedBox(width: 5,),
-                        Container(
-                          child: Text("Holidays"),
-                        )
+                        Text(_holidays,style: const TextStyle(fontSize: 12,
+                            fontWeight: FontWeight.w600 ),),
+                        const SizedBox(width: 5,),
+                        const Text("Holidays")
                       ],
                     ),
-                    Container(
-                      width: 115,
+                    SizedBox(
+                      width: 135,
                       child: Row(
                         children: [
-                          Container(
-                            child: Text('$_casualleaves',style: TextStyle(fontSize: 12,
-                                fontWeight: FontWeight.w600 ),),
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            child: Text("Casual Leaves"),
-                          )
+                          Text(_casualleaves,style: const TextStyle(fontSize: 12,
+                              fontWeight: FontWeight.w600 ),),
+                          const SizedBox(width: 5,),
+                          const Text("Casual Leaves")
                         ],
                       ),
                     )
@@ -179,28 +163,20 @@ class _attendanceListWidgetState extends State<attendanceListWidget> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          child: Text('$_leaves',style: TextStyle(fontSize: 12,
-                              fontWeight: FontWeight.w600 ),),
-                        ),
-                        SizedBox(width: 5,),
-                        Container(
-                          child: Text("Leaves"),
-                        )
+                        Text(_leaves,style: const TextStyle(fontSize: 12,
+                            fontWeight: FontWeight.w600 ),),
+                        const SizedBox(width: 5,),
+                        const Text("Leaves")
                       ],
                     ),
-                    Container(
-                      width: 115,
+                    SizedBox(
+                      width: 135,
                       child: Row(
                         children: [
-                          Container(
-                            child: Text('$_sickleaves',style: TextStyle(fontSize: 12,
-                                fontWeight: FontWeight.w600 ),),
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            child: Text("Sick Leaves"),
-                          )
+                          Text(_sickleaves,style: const TextStyle(fontSize: 12,
+                              fontWeight: FontWeight.w600 ),),
+                          const SizedBox(width: 5,),
+                          const Text("Sick Leaves")
                         ],
                       ),
                     )
@@ -214,28 +190,20 @@ class _attendanceListWidgetState extends State<attendanceListWidget> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          child: Text('$_penalty',style: TextStyle(fontSize: 12,
-                              fontWeight: FontWeight.w600 ),),
-                        ),
-                        SizedBox(width: 5,),
-                        Container(
-                          child: Text("Penalty"),
-                        )
+                        Text(_penalty,style: const TextStyle(fontSize: 12,
+                            fontWeight: FontWeight.w600 ),),
+                        const SizedBox(width: 5,),
+                        const Text("Penalty")
                       ],
                     ),
-                    Container(
-                      width: 115,
+                    SizedBox(
+                      width: 135,
                       child: Row(
                         children: [
-                          Container(
-                            child: Text('$_maternityleaves',style: TextStyle(fontSize: 12,
-                                fontWeight: FontWeight.w600 ),),
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            child: Text("Maternity Lea."),
-                          )
+                          Text(_maternityleaves,style: const TextStyle(fontSize: 12,
+                              fontWeight: FontWeight.w600 ),),
+                          const SizedBox(width: 5,),
+                          const Text("Maternity Lea.")
                         ],
                       ),
                     )
